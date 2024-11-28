@@ -32,19 +32,37 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
-
+module boolean(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+Developed by:RAJASHRI I RegisterNumber:24900207*/
+![ex2 table](https://github.com/user-attachments/assets/5dd06356-2b5e-4209-a01a-9706800a8872)
 
 
 **RTL realization**
+![Screenshot 2024-11-28 102218](https://github.com/user-attachments/assets/647652f5-7f92-4c25-9238-7c08ede8aa83)
 
-**Output:**
+
 
 **RTL**
+![Screenshot 2024-11-28 102408](https://github.com/user-attachments/assets/e98204d2-529f-499e-8c41-9d74035f4c75)
 
-**Timing Diagram**
 
 **Result:**
 
